@@ -1,0 +1,615 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-28"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-28">
+    <Prefix name="schema" IRI="https://schema.org/"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Declaration>
+        <Class IRI="#Preferences"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Touristmanager"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#culture"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#feedback"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#weather"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="schema:Accommodation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="schema:LandmarksOrHistoricalBuildings"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="schema:Mountain"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="schema:Museum"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="schema:Person"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="schema:Restaurant"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="schema:Review"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="schema:TouristAttraction"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="schema:TravelAction"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="schema:itinerary"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="schema:location"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#associate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#basedon"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#for"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#give"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#giveplan"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#have"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#include"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#locatedin"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#view"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#write"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#activities"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#attractiontype"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#coordinates"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#routes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#temperature"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#timing"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#transporttype"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#typeoftransport"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#weathertype"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:Place"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:acceptsReservations"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:address"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:amenityFeature"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:bookingTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:distance"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:email"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:event"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:floorLevel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:fromLocation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:gender"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:givenName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:hasMenu"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:numberOfBathroomsTotal"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:numberOfBedrooms"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:openingHours"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:priceRange"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:review"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:telephone"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:toLocation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:tourBookingPage"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="schema:LandmarksOrHistoricalBuildings"/>
+        <Class abbreviatedIRI="schema:TouristAttraction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="schema:Mountain"/>
+        <Class abbreviatedIRI="schema:TouristAttraction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="schema:Museum"/>
+        <Class abbreviatedIRI="schema:TouristAttraction"/>
+    </SubClassOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#associate"/>
+        <Class IRI="#culture"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#basedon"/>
+        <Class abbreviatedIRI="schema:itinerary"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#for"/>
+        <Class IRI="#weather"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#for"/>
+        <Class abbreviatedIRI="schema:TravelAction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#give"/>
+        <Class abbreviatedIRI="schema:Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#giveplan"/>
+        <Class IRI="#Touristmanager"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#have"/>
+        <Class abbreviatedIRI="schema:Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#include"/>
+        <Class abbreviatedIRI="schema:itinerary"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#locatedin"/>
+        <Class abbreviatedIRI="schema:Accommodation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#locatedin"/>
+        <Class abbreviatedIRI="schema:Restaurant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#locatedin"/>
+        <Class abbreviatedIRI="schema:TouristAttraction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#view"/>
+        <Class IRI="#Touristmanager"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#write"/>
+        <Class IRI="#Touristmanager"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associate"/>
+        <Class abbreviatedIRI="schema:location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#basedon"/>
+        <Class IRI="#Preferences"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#for"/>
+        <Class abbreviatedIRI="schema:location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#give"/>
+        <Class IRI="#feedback"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#give"/>
+        <Class abbreviatedIRI="schema:Review"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#giveplan"/>
+        <Class abbreviatedIRI="schema:Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#have"/>
+        <Class IRI="#Preferences"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#include"/>
+        <Class abbreviatedIRI="schema:TouristAttraction"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#locatedin"/>
+        <Class abbreviatedIRI="schema:location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#view"/>
+        <Class IRI="#Preferences"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#view"/>
+        <Class IRI="#feedback"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#view"/>
+        <Class abbreviatedIRI="schema:Accommodation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#view"/>
+        <Class abbreviatedIRI="schema:Restaurant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#view"/>
+        <Class abbreviatedIRI="schema:Review"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#view"/>
+        <Class abbreviatedIRI="schema:TravelAction"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#view"/>
+        <Class abbreviatedIRI="schema:itinerary"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#write"/>
+        <Class abbreviatedIRI="schema:itinerary"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#activities"/>
+        <Class abbreviatedIRI="schema:itinerary"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#attractiontype"/>
+        <Class IRI="#Preferences"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#coordinates"/>
+        <Class abbreviatedIRI="schema:location"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#date"/>
+        <Class IRI="#weather"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#routes"/>
+        <Class abbreviatedIRI="schema:itinerary"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#temperature"/>
+        <Class IRI="#weather"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#timing"/>
+        <Class abbreviatedIRI="schema:itinerary"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#transporttype"/>
+        <Class abbreviatedIRI="schema:TravelAction"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#typeoftransport"/>
+        <Class IRI="#Preferences"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#weathertype"/>
+        <Class IRI="#weather"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:Place"/>
+        <Class abbreviatedIRI="schema:itinerary"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:Place"/>
+        <Class abbreviatedIRI="schema:location"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:acceptsReservations"/>
+        <Class abbreviatedIRI="schema:Restaurant"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:address"/>
+        <Class IRI="#Touristmanager"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:address"/>
+        <Class abbreviatedIRI="schema:Accommodation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:address"/>
+        <Class abbreviatedIRI="schema:Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:address"/>
+        <Class abbreviatedIRI="schema:TouristAttraction"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:amenityFeature"/>
+        <Class abbreviatedIRI="schema:Accommodation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:amenityFeature"/>
+        <Class abbreviatedIRI="schema:Restaurant"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:bookingTime"/>
+        <Class IRI="#Preferences"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:distance"/>
+        <Class abbreviatedIRI="schema:TravelAction"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:email"/>
+        <Class IRI="#Touristmanager"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:email"/>
+        <Class abbreviatedIRI="schema:Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:event"/>
+        <Class abbreviatedIRI="schema:TouristAttraction"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:floorLevel"/>
+        <Class abbreviatedIRI="schema:Accommodation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:fromLocation"/>
+        <Class abbreviatedIRI="schema:TravelAction"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:gender"/>
+        <Class abbreviatedIRI="schema:Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:givenName"/>
+        <Class abbreviatedIRI="schema:Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:hasMenu"/>
+        <Class abbreviatedIRI="schema:Restaurant"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:name"/>
+        <Class IRI="#Touristmanager"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:name"/>
+        <Class abbreviatedIRI="schema:TouristAttraction"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:numberOfBathroomsTotal"/>
+        <Class abbreviatedIRI="schema:Accommodation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:numberOfBedrooms"/>
+        <Class abbreviatedIRI="schema:Accommodation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:review"/>
+        <Class abbreviatedIRI="schema:TouristAttraction"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:telephone"/>
+        <Class IRI="#Touristmanager"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:telephone"/>
+        <Class abbreviatedIRI="schema:Accommodation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:telephone"/>
+        <Class abbreviatedIRI="schema:TouristAttraction"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:toLocation"/>
+        <Class abbreviatedIRI="schema:TravelAction"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:tourBookingPage"/>
+        <Class abbreviatedIRI="schema:Accommodation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:tourBookingPage"/>
+        <Class abbreviatedIRI="schema:TouristAttraction"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#activities"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#attractiontype"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#coordinates"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#date"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#routes"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#temperature"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#timing"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#transporttype"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#typeoftransport"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#weathertype"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:Place"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:acceptsReservations"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:address"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:amenityFeature"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:bookingTime"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:distance"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:email"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:event"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:floorLevel"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:fromLocation"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:gender"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:givenName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:hasMenu"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:numberOfBathroomsTotal"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:numberOfBedrooms"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:review"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:telephone"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:toLocation"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:tourBookingPage"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
