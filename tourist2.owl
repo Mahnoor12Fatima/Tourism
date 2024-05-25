@@ -40,7 +40,7 @@
         <Class abbreviatedIRI="schema:Accommodation"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="schema:Mountain"/>
+        <Class abbreviatedIRI="Mountain"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="schema:Person"/>
@@ -64,7 +64,7 @@
         <Class abbreviatedIRI="schema:location"/>
     </Declaration>
     <SubClassOf>
-        <Class abbreviatedIRI="schema:Mountain"/>
+        <Class abbreviatedIRI="Mountain"/>
         <Class abbreviatedIRI="schema:TouristAttraction"/>
     </SubClassOf>
 </Ontology>
