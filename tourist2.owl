@@ -40,7 +40,7 @@
         <Class abbreviatedIRI="schema:Accommodation"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="schema:LandmarksOrHistoricalBuildings"/>
+        <Class abbreviatedIRI="schema:Mountain"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="schema:Person"/>
