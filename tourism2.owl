@@ -37,6 +37,16 @@
         <Class IRI="#weather"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="schema:Mountain"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="schema:Museum"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="schema:LandmarksOrHistoricalBuildings"/>
+    </Declaration>
+
+    <Declaration>
         <Class abbreviatedIRI="schema:Accommodation"/>
     </Declaration>
     <Declaration>
