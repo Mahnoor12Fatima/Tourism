@@ -36,15 +36,7 @@
     <Declaration>
         <Class IRI="#weather"/>
     </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="schema:Mountain"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="schema:Museum"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="schema:LandmarksOrHistoricalBuildings"/>
-    </Declaration>
+
 
     <Declaration>
         <Class abbreviatedIRI="schema:Accommodation"/>
@@ -70,6 +62,19 @@
     <Declaration>
         <Class abbreviatedIRI="schema:location"/>
     </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="schema:LandmarksOrHistoricalBuildings"/>
+        <Class abbreviatedIRI="schema:TouristAttraction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="schema:Mountain"/>
+        <Class abbreviatedIRI="schema:TouristAttraction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="schema:Museum"/>
+        <Class abbreviatedIRI="schema:TouristAttraction"/>
+    </SubClassOf>
+
 </Ontology>
 
 
