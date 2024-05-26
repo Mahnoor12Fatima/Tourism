@@ -66,10 +66,7 @@
         <Class abbreviatedIRI="schema:LandmarksOrHistoricalBuildings"/>
         <Class abbreviatedIRI="TouristAttraction"/>
     </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="schema:Mountain"/>
-        <Class abbreviatedIRI="TouristAttraction"/>
-    </SubClassOf>
+
    
 
 </Ontology>
