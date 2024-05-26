@@ -62,6 +62,10 @@
     <Declaration>
         <Class abbreviatedIRI="schema:location"/>
     </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="schema:Museum"/>
+        <Class abbreviatedIRI="schema:TouristAttraction"/>
+    </SubClassOf>
   
 
 </Ontology>
