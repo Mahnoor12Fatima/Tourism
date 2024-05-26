@@ -63,15 +63,15 @@
         <Class abbreviatedIRI="schema:location"/>
     </Declaration>
     <SubClassOf>
-        <Class abbreviatedIRI="schema:LandmarksOrHistoricalBuildings"/>
+        <Class abbreviatedIRI="LandmarksOrHistoricalBuildings"/>
         <Class abbreviatedIRI="schema:TouristAttraction"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="schema:Mountain"/>
+        <Class abbreviatedIRI="Mountain"/>
         <Class abbreviatedIRI="schema:TouristAttraction"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="schema:Museum"/>
+        <Class abbreviatedIRI="Museum"/>
         <Class abbreviatedIRI="schema:TouristAttraction"/>
     </SubClassOf>
 
