@@ -51,7 +51,7 @@
         <Class abbreviatedIRI="schema:Review"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="schema:TouristAttraction"/>
+        <Class abbreviatedIRI="TouristAttraction"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="schema:TravelAction"/>
@@ -64,9 +64,12 @@
     </Declaration>
     <SubClassOf>
         <Class abbreviatedIRI="Museum"/>
-        <Class abbreviatedIRI="schema:TouristAttraction"/>
+        <Class abbreviatedIRI="TouristAttraction"/>
     </SubClassOf>
-  
+      <SubClassOf>
+        <Class abbreviatedIRI="Mountain"/>
+        <Class abbreviatedIRI="TouristAttraction"/>
+    </SubClassOf>
 
 </Ontology>
 
