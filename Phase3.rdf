@@ -1,0 +1,710 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY schema "https://schema.org/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY untitled-ontology-31 "http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:schema="https://schema.org/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:untitled-ontology-31="http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#">
+    <Ontology rdf:about="http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#assignprojectto -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-31;assignprojectto">
+        <rdfs:comment>Projectmanager assign projects to teams</rdfs:comment>
+        <rdfs:domain rdf:resource="&untitled-ontology-31;Projectmanager"/>
+        <rdfs:range rdf:resource="&untitled-ontology-31;team"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#checkedby -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-31;checkedby">
+        <rdfs:comment>projectskills and employee skils are checked by the processing</rdfs:comment>
+        <rdfs:range rdf:resource="&untitled-ontology-31;processing"/>
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&untitled-ontology-31;projectskills"/>
+                    <rdf:Description rdf:about="&schema;skills"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#has -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-31;has">
+        <rdfs:comment>project has project type and scheduleaction and requirements and tasks</rdfs:comment>
+        <rdfs:domain rdf:resource="&schema;Project"/>
+        <rdfs:range>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&untitled-ontology-31;Projecttype"/>
+                    <rdf:Description rdf:about="&untitled-ontology-31;Tasks"/>
+                    <rdf:Description rdf:about="&schema;ScheduleAction"/>
+                    <rdf:Description rdf:about="&schema;requirements"/>
+                </unionOf>
+            </Class>
+        </rdfs:range>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#hasspicific -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-31;hasspicific">
+        <rdfs:comment>team have specific knows and employees</rdfs:comment>
+        <rdfs:domain rdf:resource="&untitled-ontology-31;team"/>
+        <rdfs:range>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&schema;employee"/>
+                    <rdf:Description rdf:about="&schema;knowsAbout"/>
+                </unionOf>
+            </Class>
+        </rdfs:range>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#having -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-31;having">
+        <rdfs:comment>employee have skills</rdfs:comment>
+        <rdfs:domain rdf:resource="&schema;employee"/>
+        <rdfs:range rdf:resource="&schema;skills"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#manages -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-31;manages">
+        <rdfs:comment>projectmanager manages processing</rdfs:comment>
+        <rdfs:domain rdf:resource="&untitled-ontology-31;Projectmanager"/>
+        <rdfs:range rdf:resource="&untitled-ontology-31;processing"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#offerdto -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-31;offerdto">
+        <rdfs:comment>training program offer to team</rdfs:comment>
+        <rdfs:range rdf:resource="&untitled-ontology-31;team"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-31;trainingprogram"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#view -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-31;view">
+        <rdfs:comment>projectmanager view projects</rdfs:comment>
+        <rdfs:domain rdf:resource="&untitled-ontology-31;Projectmanager"/>
+        <rdfs:range rdf:resource="&schema;Project"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#budget -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-31;budget">
+        <rdfs:comment>budget of project</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&schema;Project"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#experiencelevel -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-31;experiencelevel">
+        <rdfs:comment>experience level of skills</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&untitled-ontology-31;projectskills"/>
+                    <rdf:Description rdf:about="&schema;skills"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#importance -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-31;importance">
+        <rdfs:comment>importance of projectskills</rdfs:comment>
+        <rdfs:domain rdf:resource="&untitled-ontology-31;projectskills"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#leadershipstyle -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-31;leadershipstyle">
+        <rdfs:comment>teamlead have leadership style</rdfs:comment>
+        <rdfs:domain rdf:resource="&untitled-ontology-31;teamlead"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#number_of_members -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-31;number_of_members">
+        <rdfs:domain rdf:resource="&untitled-ontology-31;team"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#priority -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-31;priority">
+        <rdfs:comment>tasks have priority</rdfs:comment>
+        <rdfs:domain rdf:resource="&untitled-ontology-31;Tasks"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#role -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-31;role">
+        <rdfs:comment>teammembers play their role</rdfs:comment>
+        <rdfs:domain rdf:resource="&untitled-ontology-31;teammembers"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#targetskills -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-31;targetskills">
+        <rdfs:comment>targetskills have training program</rdfs:comment>
+        <rdfs:domain rdf:resource="&untitled-ontology-31;trainingprogram"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#teamrecord -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-31;teamrecord">
+        <rdfs:comment>teamlead have all the records of the teammembers</rdfs:comment>
+        <rdfs:domain rdf:resource="&untitled-ontology-31;teamlead"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#technology -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-31;technology">
+        <rdfs:comment>skills are relivent to some technology</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&untitled-ontology-31;projectskills"/>
+                    <rdf:Description rdf:about="&schema;skills"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/Duration -->
+
+    <DatatypeProperty rdf:about="&schema;Duration">
+        <rdfs:comment>durationof training program</rdfs:comment>
+        <rdfs:domain rdf:resource="&untitled-ontology-31;trainingprogram"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/category -->
+
+    <DatatypeProperty rdf:about="&schema;category">
+        <rdfs:comment>category of projecttype</rdfs:comment>
+        <rdfs:domain rdf:resource="&untitled-ontology-31;Projecttype"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/description -->
+
+    <DatatypeProperty rdf:about="&schema;description">
+        <rdfs:comment>project have description</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&untitled-ontology-31;Tasks"/>
+                    <rdf:Description rdf:about="&schema;Project"/>
+                    <rdf:Description rdf:about="&schema;requirements"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/email -->
+
+    <DatatypeProperty rdf:about="&schema;email">
+        <rdfs:comment>projectmanager have email</rdfs:comment>
+        <rdfs:domain rdf:resource="&untitled-ontology-31;Projectmanager"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/endDate -->
+
+    <DatatypeProperty rdf:about="&schema;endDate">
+        <rdfs:comment>tasks and scheduleaction have enddate</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&untitled-ontology-31;Tasks"/>
+                    <rdf:Description rdf:about="&schema;ScheduleAction"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/name -->
+
+    <DatatypeProperty rdf:about="&schema;name">
+        <rdfs:comment>name of somebody ore some thing</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&untitled-ontology-31;Projectmanager"/>
+                    <rdf:Description rdf:about="&untitled-ontology-31;Projecttype"/>
+                    <rdf:Description rdf:about="&untitled-ontology-31;Tasks"/>
+                    <rdf:Description rdf:about="&untitled-ontology-31;projectskills"/>
+                    <rdf:Description rdf:about="&untitled-ontology-31;team"/>
+                    <rdf:Description rdf:about="&untitled-ontology-31;teamlead"/>
+                    <rdf:Description rdf:about="&untitled-ontology-31;teammembers"/>
+                    <rdf:Description rdf:about="&untitled-ontology-31;trainingprogram"/>
+                    <rdf:Description rdf:about="&schema;Project"/>
+                    <rdf:Description rdf:about="&schema;skills"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/startDate -->
+
+    <DatatypeProperty rdf:about="&schema;startDate">
+        <rdfs:comment>tasks and scheduleaction have startdate</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&untitled-ontology-31;Tasks"/>
+                    <rdf:Description rdf:about="&schema;ScheduleAction"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/status -->
+
+    <DatatypeProperty rdf:about="&schema;status">
+        <rdfs:comment>tasks have status</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&untitled-ontology-31;Tasks"/>
+                    <rdf:Description rdf:about="&schema;requirements"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/telephone -->
+
+    <DatatypeProperty rdf:about="&schema;telephone">
+        <rdfs:comment>projectmanager have telephone</rdfs:comment>
+        <rdfs:domain rdf:resource="&untitled-ontology-31;Projectmanager"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/url -->
+
+    <DatatypeProperty rdf:about="&schema;url">
+        <rdfs:comment>url for project</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+        <rdfs:domain rdf:resource="&schema;Project"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#Projectmanager -->
+
+    <Class rdf:about="&untitled-ontology-31;Projectmanager">
+        <rdfs:comment>A project manager leads and coordinates teams to deliver projects on time, within budget, and meeting defined goals.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#Projecttype -->
+
+    <Class rdf:about="&untitled-ontology-31;Projecttype">
+        <rdfs:comment>type of the project</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#Tasks -->
+
+    <Class rdf:about="&untitled-ontology-31;Tasks">
+        <rdfs:comment>unit of work within a project, typically with a specific goal, deadline, and assigned owner.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#functional -->
+
+    <Class rdf:about="&untitled-ontology-31;functional">
+        <rdfs:subClassOf rdf:resource="&schema;requirements"/>
+        <rdfs:comment> specific features, functionalities, and behaviors a system must possess.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#non-functional -->
+
+    <Class rdf:about="&untitled-ontology-31;non-functional">
+        <rdfs:subClassOf rdf:resource="&schema;requirements"/>
+        <rdfs:comment>how a system should behave, focusing on aspects like performance, usability, and security.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#processing -->
+
+    <Class rdf:about="&untitled-ontology-31;processing">
+        <rdfs:comment>Transforming data or information into a desired format or state through a series of operations.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#projectskills -->
+
+    <Class rdf:about="&untitled-ontology-31;projectskills">
+        <rdfs:subClassOf rdf:resource="&schema;requirements"/>
+        <rdfs:comment>It combined abilities needed to effectively manage and complete projects.
+</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#team -->
+
+    <Class rdf:about="&untitled-ontology-31;team">
+        <rdfs:comment>A collaborative group of individuals working together towards a shared objective.
+</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#teamlead -->
+
+    <Class rdf:about="&untitled-ontology-31;teamlead">
+        <rdfs:subClassOf rdf:resource="&schema;employee"/>
+        <disjointWith rdf:resource="&untitled-ontology-31;teammembers"/>
+        <rdfs:comment>A team leader guides, motivates, and oversees a team to achieve project goals.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#teammembers -->
+
+    <Class rdf:about="&untitled-ontology-31;teammembers">
+        <rdfs:subClassOf rdf:resource="&schema;employee"/>
+        <rdfs:comment>A team member contributes their skills and expertise to collaborate with others towards shared goals.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#trainingprogram -->
+
+    <Class rdf:about="&untitled-ontology-31;trainingprogram">
+        <rdfs:comment>A structured learning experience designed to develop specific skills or knowledge.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://schema.org/Project -->
+
+    <Class rdf:about="&schema;Project">
+        <rdfs:comment>A collaborative effort to achieve a specific goal within a defined timeframe and budget.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://schema.org/ScheduleAction -->
+
+    <Class rdf:about="&schema;ScheduleAction">
+        <rdfs:comment>action to be performed at a specific time in the future, potentially repeating at intervals.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://schema.org/employee -->
+
+    <Class rdf:about="&schema;employee">
+        <rdfs:comment>An individual hired by a company to perform specific duties and contribute to the organization&apos;s goals.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://schema.org/knowsAbout -->
+
+    <Class rdf:about="&schema;knowsAbout">
+        <rdfs:comment> Possesses knowledge or expertise in a particular area</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://schema.org/requirements -->
+
+    <Class rdf:about="&schema;requirements">
+        <rdfs:comment>what a project must do and how it should perform.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://schema.org/skills -->
+
+    <Class rdf:about="&schema;skills">
+        <rdfs:comment>the abilities and knowledge applied to perform a task or achieve a goal.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#Project_1 -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-31;Project_1">
+        <rdf:type rdf:resource="&schema;Project"/>
+        <schema:url rdf:datatype="&xsd;string">https://www.exampleproject.com/</schema:url>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#Projectmanager -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-31;Projectmanager">
+        <rdf:type rdf:resource="&untitled-ontology-31;Projectmanager"/>
+        <schema:telephone rdf:datatype="&xsd;integer">03334830631</schema:telephone>
+        <schema:name rdf:datatype="&xsd;string">Saad Hussain</schema:name>
+        <schema:email rdf:datatype="&xsd;string">saadhussain868@gmail.com</schema:email>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#ScheduleAction_1 -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-31;ScheduleAction_1">
+        <rdf:type rdf:resource="&schema;ScheduleAction"/>
+        <schema:endDate rdf:datatype="&xsd;dateTimeStamp">19/6/2024</schema:endDate>
+        <schema:startDate rdf:datatype="&xsd;dateTimeStamp">7/6/2024</schema:startDate>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#projectskills_1 -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-31;projectskills_1">
+        <rdf:type rdf:resource="&untitled-ontology-31;projectskills"/>
+        <untitled-ontology-31:technology rdf:datatype="&xsd;string">mean stack</untitled-ontology-31:technology>
+        <untitled-ontology-31:importance rdf:datatype="&xsd;string">more</untitled-ontology-31:importance>
+        <untitled-ontology-31:experiencelevel rdf:datatype="&xsd;string">senior</untitled-ontology-31:experiencelevel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#projecttype_1 -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-31;projecttype_1">
+        <rdf:type rdf:resource="&untitled-ontology-31;Projecttype"/>
+        <schema:category rdf:datatype="&xsd;string">Ecommerecewebsite development</schema:category>
+        <schema:category rdf:datatype="&xsd;string">Webdevelopment</schema:category>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#requirements_1 -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-31;requirements_1">
+        <rdf:type rdf:resource="&schema;requirements"/>
+        <schema:status rdf:datatype="&xsd;string">Done</schema:status>
+        <schema:description rdf:datatype="&xsd;string">Provide all things like api key required for frontend</schema:description>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#skills_1 -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-31;skills_1">
+        <rdf:type rdf:resource="&schema;skills"/>
+        <untitled-ontology-31:experiencelevel rdf:datatype="&xsd;string">Senior</untitled-ontology-31:experiencelevel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#task_1 -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-31;task_1">
+        <rdf:type rdf:resource="&untitled-ontology-31;Tasks"/>
+        <schema:startDate rdf:datatype="&xsd;dateTimeStamp">2/6/2024</schema:startDate>
+        <schema:endDate rdf:datatype="&xsd;dateTimeStamp">2/8/2024</schema:endDate>
+        <schema:name rdf:datatype="&xsd;string">frontend</schema:name>
+        <untitled-ontology-31:priority rdf:datatype="&xsd;string">high</untitled-ontology-31:priority>
+        <schema:description rdf:datatype="&xsd;string">provide UI to user to interact with website and perform sale and purchase</schema:description>
+        <schema:status rdf:datatype="&xsd;string">to-do</schema:status>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#team_1 -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-31;team_1">
+        <rdf:type rdf:resource="&untitled-ontology-31;team"/>
+        <untitled-ontology-31:number_of_members rdf:datatype="&xsd;integer">10</untitled-ontology-31:number_of_members>
+        <schema:name rdf:datatype="&xsd;string">Developmentteam</schema:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#teammembers_1 -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-31;teammembers_1">
+        <rdf:type rdf:resource="&untitled-ontology-31;teammembers"/>
+        <schema:name rdf:datatype="&xsd;string">Moeez ur Rehman</schema:name>
+        <untitled-ontology-31:role rdf:datatype="&xsd;string">Software Developer</untitled-ontology-31:role>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/abc/ontologies/2024/4/untitled-ontology-31#trainingprogram_1 -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-31;trainingprogram_1">
+        <rdf:type rdf:resource="&untitled-ontology-31;trainingprogram"/>
+        <schema:Duration rdf:datatype="&xsd;string">3 months</schema:Duration>
+        <untitled-ontology-31:targetskills rdf:datatype="&xsd;string">Effective Communication Training</untitled-ontology-31:targetskills>
+        <schema:name rdf:datatype="&xsd;string">Soft Skills Development</schema:name>
+    </NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-31;functional"/>
+            <rdf:Description rdf:about="&untitled-ontology-31;non-functional"/>
+            <rdf:Description rdf:about="&untitled-ontology-31;projectskills"/>
+        </members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
